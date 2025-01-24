@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 2 by Olivier Niyonshima</title>  
+		<!-- there was Lab 4 and replaced with  lab2 , to ask professor -->
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		
+		<div id="box">
+		<fieldset>
+			<header>
+				<h1>Registration</h1>
+				<p id="middle">Please enter the following information. Fields marked with an asterisk (<span id="neededx">*</span>) are required.
+				<!-- where x in "neededx" respresents numbers from 1 to 8 such as needed1, needed2 ,..., needed8</p> -->
+			</header>
+			<div id="inside">
+				<form method="post"  action="javascript:void(0)">
+
+
+		
+			<fieldset>
+				<fieldset id="Personal1">
+				<legend>Personal Information</legend>
+				<!-- * First Name | textbox -->
+				 <label for="First Name" required ><span id="needed1">* </span>First Name : </label> &nbsp;&nbsp;&nbsp;
+				 <input type="text" id="First Name" name="First Name"> <br><br>
+				 <!-- * Last Name | textbox -->
+				 <label for="Last Name "><span id="needed2">* </span>Last Name : </label>&nbsp;&nbsp;&nbsp;&nbsp;
+				 <input type="text" id="Last Name" name="Last"> <br><br>
+				 <!-- * Address | textbox, with a size of 40 characters -->
+				 <label for="Address"><span id="needed3">* </span>Address : </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 <input type="text" name="Address" id="Address" size="40"> <br><br>
+					
+				<!-- * City | textbox -->
+				 <label for="City"><span id="needed4">* </span>City : </label> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				 <input type="text" id="City" name="City"> <br> <br>
+				 <!-- * Province | dropdown box, has options for all provinces and territories. 
+					Option values should be the short code for the province. A list is provided below. 
+					
+					BC - British Columbia
+					AB - Alberta
+					SK - Saskatchewan
+					MB - Manitoba
+					ON - Ontario
+					QC - Quebec
+					NB - New Brunswick
+					NS - Nova Scotia
+					PE - Prince Edward Island
+					NF - Newfoundland
+					YK - Yukon
+					NWT- Northwest Territories
+					NU - Nunavut
+					
+				-->
+				 <label for="Province"> <span id="needed5">* </span>Province :</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 <select name="Province" id="Province"> Province
+					<option value="select" > Select a Province</option>
+					<option value="BC">British Columbia</option>
+					<option value="SK">Saskatchewan</option>
+					<option value="AB ">Alberta</option>
+					<option value="MB ">Manitoba</option>
+					<option value="ON">Ontario</option>
+					<option value="QC">Quebec</option>
+					<option value="NB ">New Brunswick</option>
+					<option value="NS ">Nova Scotia</option>
+					<option value="PE ">Prince Edward Island</option>
+					<option value="NF ">Newfoundland</option>
+					<option value="YK ">Yukon</option>
+					<option value="NWT">Northwest Territories</option>
+					<option value="NU">Nunavut</option>
+				
+					
+				 </select> <br> <br>
+				
+				</fieldset> 
+				<fieldset id="Personal2">
+				<!-- * Postal Code | textbox, maximum length of 6 characters -->
+				 <label for="Postal Code"> <span id="needed6">* </span>Postal Code : </label>&nbsp;&nbsp;
+				 <input type="text" name="Postal Code" id="Postal Code" maxlength="6"> <br><br>
+				<!-- * Email address | textbox -->
+				 <label for="Email" ><span id="needed7">* </span> Email Address:</label>
+				 <input type="text" id= "Email" name="Email"> <br><br>
+				</fieldset>
+				<fieldset id="Personal3">
+				<!-- * Home phone | textbox -->
+				 <label for="Home"><span id="needed8">* </span>Home Phone : </label> &nbsp;
+				 <input type="text" id="Home" name="Home"> <br><br>
+				<!-- Work phone | textbox -->
+				 <label for="workPhone">&nbsp;&nbsp;Work Phone : </label> &nbsp;&nbsp;&nbsp;
+				 <input type="text" id="workPhone" name="workPhone">
+				</fieldset>
+					
+			</fieldset>
+			<fieldset>
+				<legend>Payment Information</legend>
+				<!-- Credit Card Type | radio buttons
+					 
+					 There should be three buttons: one for VISA, one for MasterCard, and one for American Express.
+					 All three buttons can go in one <td> element.
+					 
+					 NOTE: each radio button should have the same name, but a different id. For example, you might use
+					 the name "creditCard" for each, but "creditCardVisa", "creditCardAmex" and "creditCardMasterCard"
+					 as the id's. 
+					 
+					 Also, please review the lab instructions regarding the placement of credit card icon images beside
+					 each radio button. 
+				-->
+				<label for="CreditCard">Credit Card Type : </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img src="images/visa.png" alt="Visa Payment" >	
+				<input type="radio" name="CreditCard" id="creditCardVisa" value="Visa"> 
+				<img src="images/mastercard.png" alt="Visa Payment" >	
+				<input type="radio" name="CreditCard" id="creditCardMasterCard" value="Visa"> 
+				<img src="images/amex.png" alt="Visa Payment" >	
+				<input type="radio" name="CreditCard" id="creditCardAmex" value="Visa"> <br><br>
+
+				<!-- Credit Card Number | textbox -->
+				 <label for="CreditCardNumber">Credit Card Number </label> &nbsp;&nbsp;
+				 <input type="number" id="CreditCardNumber" name="CreditCardNumber"> <br> <br>
+
+				<!-- Expiry Date | textbox, maximum 5 characters (MM/YY) -->
+				 <label for="ExpiryDate">Expiry (MM/YY)</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 <input type="text" id="ExpiryDate" name="ExpressDate" maxlength="2" size="2"> / <input type="text" id="ExpiryDate" name="ExpressDate" maxlength="2" size="2"> <br><br> 
+				 <!-- The total size is 5 including /  -->
+			</fieldset>
+			<fieldset>
+				<legend>Agree and Submit</legend>
+					<!-- * Agree to Terms and Conditions? | checkbox, value of 'yes' --> <br>
+					<label for="Agree">Check if you agree with our <a href="#">Terms and Conditions</a>
+						 </label> &nbsp;&nbsp;
+					<input type="checkbox" id="Agree" name="Agree" value="yes"> <br><br>
+					<!-- No field name. Place a submit button in one column, and reset button in the other. -->
+					 <input type="button" value="Submit Registration" id="Submit" >
+					 <input type="reset" value="Reset Form" id="Reset">
+			</fieldset>
+			</div><!-- End Content -->
+			<footer>	
+				<p>&copy;2025 CST8285. All rights reserved.</p> 
+				<!-- styling of this to be added in CSS  -->
+
+			</footer>
+			</fieldset>
+		</form>
+		</div><!-- End Wrapper -->
+	</body>
+</html>
