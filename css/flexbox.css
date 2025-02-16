@@ -1,0 +1,66 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* my default font style */
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333; /* Dark charcoal */
+    color: white;
+    padding: 22px;
+    text-align: center;
+  }
+  
+  /* Container styles */
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping */
+    justify-content: space-between; /* Equal space between items */
+    max-width: 800px;
+    margin: 40px auto; /* Center horizontally and add top-bottom margin */
+  }
+  
+  /* Box styles */
+  .box {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1; /* Equal width for all boxes */
+    min-width: 200px; /* Minimum width */
+    margin: 10px; /* Spacing around each box */
+    box-sizing: border-box; 
+  }
+  #red {
+    background-color: red;
+  }
+ #green {
+        background-color: green;
+    }
+ #blue {
+        background-color: blue;
+    }
+ #yellow {
+        background-color: yellow;
+    }
+#orange {
+        background-color: orange;
+    }
+  
+  /* Footer styles */
+  footer p {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column; /* I've Changed layout to vertical for small screens */
+      align-items: center;
+    }
+    
+  }
+  

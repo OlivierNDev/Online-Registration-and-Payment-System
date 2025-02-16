@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Added lang attribute -->
+	<head>
+		<title>Lab 2 by Olivier Niyonshima</title>  
+		<!-- there was Lab 4 and replaced with  lab2 , to ask professor -->
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="box">
+		<fieldset>
+			<header>
+				<h1>Registration</h1>
+				<p id="middle">Please enter the following information. Fields marked with an asterisk (<span id="neededx">*</span>) are required.</p>
+				<!-- where x in "neededx" respresents numbers from 1 to 8 such as needed1, needed2 ,..., needed8</p> -->
+			</header>
+			<div id="inside">
+				<form method="post" action="javascript:void(0)">
+					<fieldset>
+						<legend>Personal Information</legend>
+						<table>
+							<!-- * First Name | textbox -->
+                                <tr>
+                                    <td><label for="FirstName"><span id="needed1">* </span>First Name :</label></td>
+                                    <td><input type="text" id="FirstName" name="FirstName"></td> <!-- Removed space from id and name -->
+                                </tr>
+							<!-- * Last Name | textbox -->
+                                <tr>
+                                    <td><label for="LastName"><span id="needed2">* </span>Last Name :</label></td>
+                                    <td><input type="text" id="LastName" name="LastName"></td> <!-- Removed space from id and name -->
+                                </tr>
+							 <!-- * Address | textbox, with a size of 40 characters -->
+                                <tr>
+                                    <td><label for="Address"><span id="needed3">* </span>Address :</label></td>
+                                    <td><input type="text" name="Address" id="Address" size="40"></td>
+                                </tr>
+                            </table>
+                             <!-- * City | textbox -->
+                            <table id="box2">
+                                <tr>
+                                    <td><label for="City"><span id="needed4">* </span>City :</label></td> 
+                                    <td><input type="text" id="City" name="City" size="33"></td>
+                                </tr>
+								<!-- * Province | dropdown box, has options for all provinces and territories. -->
+                                <tr>
+                                    <td><label for="Province"><span id="needed5">* </span>Province :</label></td>
+                                    <td>
+                                        <select name="Province" id="Province">
+                                            <option value="select">Select a Province</option>
+                                            <option value="BC">British Columbia</option>
+                                            <option value="SK">Saskatchewan</option>
+                                            <option value="AB">Alberta</option>
+                                            <option value="MB">Manitoba</option>
+                                            <option value="ON">Ontario</option>
+                                            <option value="QC">Quebec</option>
+                                            <option value="NB">New Brunswick</option>
+                                            <option value="NS">Nova Scotia</option>
+                                            <option value="PE">Prince Edward Island</option>
+                                            <option value="NF">Newfoundland</option>
+                                            <option value="YK">Yukon</option>
+                                            <option value="NWT">Northwest Territories</option>
+                                            <option value="NU">Nunavut</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        <table id="box3">
+                             <!-- * Postal Code | textbox, maximum length of 6 characters -->
+						<tr>
+						 <td><label for="PostalCode"><span id="needed6">* </span>Postal Code :</label></td> <!-- Removed space from id -->
+						 <td><input type="text" name="PostalCode" id="PostalCode" maxlength="6" size="47"></td> <!-- Removed space from id -->
+						</tr>
+						<!-- * Email address | textbox -->
+						<tr>
+								<td><label for="Email"><span id="needed7">* </span>Email Address:</label></td>
+								<td><input type="text" id="Email" name="Email" size="47"></td>
+						</tr>
+                        </table>
+                        <table id="box4">
+						<!-- * Home phone | textbox -->
+							<tr>
+								<td><label for="Home"><span id="needed8">* </span>Home Phone :</label></td>
+								<td><input type="text" id="Home" name="Home" size="43"></td>
+							</tr>
+						<!-- Work phone | textbox -->
+							<tr>
+								<td><label for="WorkPhone"> Work Phone :</label></td> <!-- Removed space from id -->
+								<td><input type="text" id="WorkPhone" name="WorkPhone" size="41" ></td> <!-- Removed space from id -->
+							</tr>
+						</table>
+					</fieldset>
+					<fieldset>
+
+						
+						<legend>Payment Information</legend>
+						<!-- Credit Card Type | radio buttons -->
+						<table>
+							<!-- Credit Card Type | radio buttons -->
+<tr>
+    <td><label for="creditCardVisa">Credit Card Type (Visa):</label></td>
+    <td>
+        <img src="images/visa.png" alt="Visa Payment">
+        <input type="radio" name="CreditCard" id="creditCardVisa" value="Visa">
+        <img src="images/mastercard.png" alt="MasterCard Payment">
+        <input type="radio" name="CreditCard" id="creditCardMasterCard" value="MasterCard">
+        <img src="images/amex.png" alt="Amex Payment">
+        <input type="radio" name="CreditCard" id="creditCardAmex" value="Amex">
+    </td>
+</tr>
+
+<!-- Expiry Date | textbox, maximum 5 characters (MM/YY) -->
+<tr>
+    <td><label for="ExpiryDateMM">Expiry (MM/YY):</label></td>
+    <td>
+        <input type="text" id="ExpiryDateMM" name="ExpiryDateMM" maxlength="2" size="2"> / 
+        <input type="text" id="ExpiryDateYY" name="ExpiryDateYY" maxlength="2" size="2">
+    </td>
+</tr>
+
+						</table>
+					</fieldset>
+					<fieldset>
+						<legend>Agree and Submit</legend>
+						<table>
+							<!-- * Agree to Terms and Conditions? | checkbox, value of 'yes' -->
+							<tr>
+								<td><label for="Agree">Check if you agree with our <a href="#">Terms and Conditions</a>:</label></td>
+								<td><input type="checkbox" id="Agree" name="Agree" value="yes"></td>
+							</tr>
+							<!-- No field name. Place a submit button in one column, and reset button in the other. -->
+							<tr>
+								<td><input type="button" value="Submit Registration" id="Submit"></td>
+								<td><input type="reset" value="Reset Form" id="Reset"></td>
+							</tr>
+						</table>
+					</fieldset>
+				</form>
+			</div><!-- End Content -->
+			<footer>
+				<p>&copy;2025 CST8285. All rights reserved.</p>
+			</footer>
+		</fieldset>
+		</div>
+	</body>
+</html>
